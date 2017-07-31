@@ -1,0 +1,7 @@
+$theme-colors: (
+  color1: #0E5B6E,
+  color2: #1AA6C8
+);
+
+$default-theme-color: map_get($theme-colors, color1);
+$default-reverse-color: map_get($theme-colors, color2);

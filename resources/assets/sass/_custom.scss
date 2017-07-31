@@ -1,0 +1,112 @@
+$directions : (
+        top : top,
+        bot : bottom,
+        lft : left,
+        rgt : right
+);
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  @each $direction-key, $direction-value in $directions {
+    .m-#{$direction-key}-#{$i} {
+      margin-#{$direction-value}: $i+px !important;;
+    }
+  }
+  @each $direction-key, $direction-value in $directions {
+    .p-#{$direction-key}-#{$i} {
+      padding-#{$direction-value}: $i+px !important;;
+    }
+  }
+}
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  .margin-#{$i} {
+    margin: $i+px !important;;
+  }
+  .padding-#{$i} {
+    padding: $i+px !important;;
+  }
+}
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  .m-top-bot-#{$i} {
+    margin: $i+px 0 !important;
+  }
+  .m-lft-rgt-#{$i} {
+    margin: 0 $i+px !important;;
+  }
+  .p-top-bot-#{$i} {
+    padding: $i+px 0 !important;;
+  }
+  .p-lft-rgt-#{$i} {
+    padding: 0 $i+px !important;;
+  }
+  .height-#{$i} {
+    height: $i+px !important;
+  }
+}
+
+@for $i from 0 through 30 {
+  .font-size-#{$i} {
+    font-size: $i+px !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 768px) {
+  .pull-right-xs {
+    float: right !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pull-right-xs {
+    float: left !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .pull-right-md {
+    float: right !important;
+  }
+}
+
+.language {
+  .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: $default-reverse-color;
+    color: white;
+  }
+  .dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+  }
+}
+
+$txt-colors : (
+  white: white,
+  red : red
+);
+
+@each $key, $color in $txt-colors {
+  .txt-#{$key} {
+    color: $color !important;
+  }
+}
