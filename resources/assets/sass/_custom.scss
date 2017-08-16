@@ -54,6 +54,12 @@ $directions : (
   }
 }
 
+@for $i from 0 through 10 {
+  .txt-shadow-#{$i} {
+    text-shadow: 0px 0px $i+px rgba(255,255,255,0.5);
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -108,5 +114,12 @@ $txt-colors : (
 @each $key, $color in $txt-colors {
   .txt-#{$key} {
     color: $color !important;
+  }
+}
+
+.page-content {
+  li {
+    list-style: circle;
+    list-style-position: inside;
   }
 }

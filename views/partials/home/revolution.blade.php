@@ -29,7 +29,7 @@
                      data-splitin="none"
                      data-splitout="none"
                      data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap;">{{ $slider->sub_title }}
+                     style="z-index: 5; white-space: nowrap;">{!! $slider->sub_title !!}
                 </div>
                 @endif
 

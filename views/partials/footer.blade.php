@@ -41,8 +41,8 @@
                 <div class="col-md-3 widget">
                     @php $menu = app(\Modules\Menu\Repositories\MenuRepository::class)->findBySlug('corporate') @endphp
                     @if(isset($menu))
-                    <h2 class="white-text">{{ $menu->title }}</h2>
-                    {!! Menu::render('services', \Modules\Theme\Presenters\Tagar\FooterMenuLinksPresenter::class) !!}
+                        <h2 class="white-text">{{ $menu->title }}</h2>
+                        {!! Menu::render('corporate', \Modules\Theme\Presenters\Tagar\FooterMenuLinksPresenter::class) !!}
                     @endif
                 </div><!-- /.col-md-3 -->
 
@@ -56,12 +56,11 @@
 
 
                 <div class="col-md-3 widget">
-                    <h2 class="white-text">{{ trans('themes::blog.titles.recent posts') }}</h2>
-                    <ul class="footer-list">
-                        @foreach(Blog::latest(5) as $post)
-                        <li><a href="#">{{ $post->title }}</a> </li>
-                        @endforeach
-                    </ul>
+                    @php $menu = app(\Modules\Menu\Repositories\MenuRepository::class)->findBySlug('links') @endphp
+                    @if(isset($menu))
+                        <h2 class="white-text">{{ $menu->title }}</h2>
+                        {!! Menu::render('links', \Modules\Theme\Presenters\Tagar\FooterMenuLinksPresenter::class) !!}
+                    @endif
                 </div><!-- /.col-md-3 -->
             </div>
 

@@ -27,7 +27,7 @@
                         <i class="material-icons brand-color">&#xE55F;</i>
                         <div class="address">
                             {{ setting('theme::company-name') }}
-                            <p>{{ setting('theme::address') }}</p>
+                            <p>{!! setting('theme::address') !!}</p>
                         </div>
 
                         <i class="material-icons brand-color">&#xE61C;</i>

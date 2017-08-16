@@ -7,7 +7,7 @@
     @endcomponent
 
     <!-- heading section start -->
-    <section class="ptb-90">
+    <section class="ptb-90 page-content">
         <div class="container">
 
             @if(!empty(@$page->extension()->sub_title))
